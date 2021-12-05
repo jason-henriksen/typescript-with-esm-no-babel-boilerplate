@@ -2,15 +2,16 @@ export default {
     globals: {
         extensionsToTreatAsEsm: ['.ts', '.js'],
         'ts-jest': {
+            // without this, you git really frustrating errors.
             useESM: true,
         }
     },
 
+    // this preset is absurdly important and (for me) was really a PITA to discover!
     preset: 'ts-jest/presets/js-with-ts-esm',
 
-    // from https://stackoverflow.com/a/57916712/15076557
+    // also important to not have anything in here
     transformIgnorePatterns: [
-//        'node_modules/(?!(module-that-needs-to-be-transformed)/)'
     ],
     testPathIgnorePatterns:[
       "/node_modules/",
