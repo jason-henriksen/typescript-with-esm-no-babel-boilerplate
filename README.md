@@ -5,6 +5,10 @@ In the end, I did have to care, but this is the best solution I could find that 
 
 This is my first build that actually gets the CLI, the Tests and the Linter to all work.   Please provide feedback and ideas for how to make it even more correct.
 
+Also just a note:  I am using Node 16.  
+
+For reasons unknown, on node 14 the CLI command works, but the Jest Test fails.  I'd love to hear why if anyone knows.
+
 Thanks for taking a look!
 
 - Jason
