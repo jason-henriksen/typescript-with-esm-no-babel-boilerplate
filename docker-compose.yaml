@@ -1,0 +1,26 @@
+# A basic docker-compose file to help with local dev.
+# Run `docker-compose up` then `docker compose exec ts-boilerplate ash`
+
+version: '3'
+
+services:
+  ts-boilerplate:
+    image: 'node:16-alpine'
+    # ports:
+    #   - 3000:3000/tcp
+    #   - 3003:3003/tcp
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ts_bolierplate_node_modules:/app/node_modules
+    # - - - - - - -
+    # command: 'npm run start:dev'
+    # - - - - - - -
+    command: []
+    entrypoint: ['/bin/ash']
+    tty: true
+    stdin_open: true
+    # - - - - - - -
+
+volumes:
+  ts_bolierplate_node_modules:

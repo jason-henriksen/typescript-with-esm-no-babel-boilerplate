@@ -1,16 +1,23 @@
 {
+  "ts-node": {
+    "moduleTypes": {
+      "jest.config.ts": "cjs"
+    },
+    // To use swc: https://github.com/TypeStrong/ts-node#bundled-swc-integration
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental"
+  },
   "compilerOptions": {
     // This was actually kind of a nightmare to figure out.
     // There is a LOT of outdated, incorrect advise out there.
     // there is/was an ESM vs CommonJS war that's made a huge mess, this seems to get us through it.
-    "target": "esnext",  // DO NOT CHANGE!
-    "module": "esnext",  // DO NOT CHANGE!
+    "target": "esnext", // DO NOT CHANGE!
+    "module": "esnext", // DO NOT CHANGE!
     "moduleResolution": "node",
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "declaration": true,
@@ -32,7 +39,13 @@
     "lib": [
       "ES6",
       "DOM"
-    ]
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "#lib/*": [
+        "lib/*"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts",
