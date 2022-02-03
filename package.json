@@ -36,6 +36,9 @@
     "esbuild-node:watch": "esbuild src/cli.ts --bundle --platform=node --watch --sourcemap=external --outfile=dist/esbuild/cli.js"
   },
   "devDependencies": {
+    "@swc/core": "^1.2.136",
+    "@swc/helpers": "^0.3.2",
+    "@swc/jest": "^0.2.17",
     "@types/jest": "^26.0.24",
     "@types/node": "^15.0.1",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
@@ -43,6 +46,7 @@
     "esbuild": "^0.11.11",
     "eslint": "^7.22.0",
     "jest": "^27.4.7",
+    "regenerator-runtime": "^0.13.9",
     "ts-jest": "^27.1.3",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",

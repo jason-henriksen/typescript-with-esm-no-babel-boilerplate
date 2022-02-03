@@ -2,7 +2,10 @@
   "ts-node": {
     "moduleTypes": {
       "jest.config.ts": "cjs"
-    }
+    },
+    // To use swc: https://github.com/TypeStrong/ts-node#bundled-swc-integration
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental"
   },
   "compilerOptions": {
     // This was actually kind of a nightmare to figure out.

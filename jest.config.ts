@@ -1,6 +1,6 @@
 import * as tsConfigPaths from 'tsconfig-paths';
 import { ConfigLoaderSuccessResult } from 'tsconfig-paths';
-import { pathsToModuleNameMapper } from 'ts-jest/utils';
+import { pathsToModuleNameMapper } from 'ts-jest';
 
 // Get the parameters for paths mapping.
 let pathsOptions: { prefix: string } | undefined,
@@ -22,6 +22,11 @@ try {
 }
 
 export default {
+  // To use swc: https://github.com/swc-project/jest
+  transform: {
+    '^.+\\.(t|j)sx?$': ['@swc/jest'],
+  },
+
   globals: {
     extensionsToTreatAsEsm: ['.ts', '.js'],
     'ts-jest': {

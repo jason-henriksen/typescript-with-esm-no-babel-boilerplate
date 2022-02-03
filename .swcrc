@@ -1,0 +1,22 @@
+{
+  "jsc": {
+    "baseUrl": "./src",
+    "parser": {
+      "syntax": "typescript"
+    },
+    "target": "es2022",
+    "paths": {
+      "#lib/*": [
+        "lib/*"
+      ]
+    }
+  },
+  "module": {
+    "type": "es6"
+  },
+  "env": {
+    "targets": {
+      "node": 16
+    }
+  }
+}
