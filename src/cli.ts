@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import { foo } from './main'
+import { foo } from './main';
+import { pathDemo } from '#lib/pathDemo';
 
-foo()
+foo();
+console.log(pathDemo());

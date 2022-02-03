@@ -20,7 +20,7 @@
   },
   "scripts": {
     "cli-comment": "These extra parameters are absolutely required.  wont work without them.",
-    "cli": "node --loader ts-node/esm --experimental-specifier-resolution=node src/cli.ts",
+    "cli": "node --experimental-specifier-resolution=node --loader ./loader.js src/cli.ts",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
     "clean": "rm -rf dist build package",
@@ -42,9 +42,10 @@
     "@typescript-eslint/parser": "^5.5.0",
     "esbuild": "^0.11.11",
     "eslint": "^7.22.0",
-    "jest": "^27.4.3",
-    "ts-jest": "^27.0.7",
-    "ts-node": "^9.1.1",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.12.0",
     "typedoc": "^0.20.35",
     "typescript": "^4.2.3"
   },
